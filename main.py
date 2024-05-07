@@ -28,7 +28,7 @@ async def go(ctx):
             await ctx.send("Не удалось загрузить изображение покемона.")
     else:
         await ctx.send("Ты уже создал себе покемона.")
-        
+
 @bot.command()
 async def start(ctx):
     await ctx.send("Привет! Я бот для игры в покемонов, скорее попробуй создать себе покемона, нажимай - !go")
