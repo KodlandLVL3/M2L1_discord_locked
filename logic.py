@@ -25,14 +25,12 @@ class Pokemon:
                 else:
                     return "Pikachu"
 
-
-   async def info(self):
+    async def info(self):
         if not self.name:
             self.name = await self.get_name()
         return f"""Имя твоего покемона: {self.name}
                 Сила покемона: {self.power}
                 Здоровье покемона: {self.hp}"""
-    
 
     async def show_img(self):
         url = f'https://pokeapi.co/api/v2/pokemon/{self.pokemon_number}'
@@ -44,7 +42,6 @@ class Pokemon:
                     return img_url 
                 else:
                     return None
-    
 
     async def attack(self, enemy):
         if isinstance(enemy, Wizard):
